@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Book Title" />
+
+    <EditText
+        android:id="@+id/dateEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleEditText"
+        android:hint="Completion Date" />
+
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dateEditText"
+        android:backgroundTint="#F8AA8E"
+        android:text="Add Book"
+        android:enabled="true" />
+
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addButton"
+        android:layout_marginTop="16dp"
+        android:clipToPadding="false"
+        android:queryHint="Search Books" />
+
+    <TextView
+        android:id="@+id/searchResultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchView"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/randomGenreButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchResultTextView"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#F8AA8E"
+        android:text="Random Genre" />
+
+    <TextView
+        android:id="@+id/displayTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/randomGenreButton"
+        android:layout_marginTop="16dp"
+        android:text="Suggested genre will appear here" />
+
+    <Button
+        android:id="@+id/displayBooksButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/displayTextView"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#F8AA8E"
+        android:text="Display All Books" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/displayBooksButton"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/allBooksTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="All books will be listed here" />
+    </ScrollView>
+
+</RelativeLayout>
